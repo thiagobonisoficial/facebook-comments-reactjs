@@ -3,8 +3,6 @@
 This is the **first bootcamp challenge**. Where in this challenge was developed a **Facebook-style posts feed**. During development, it was necessary to **develop the components, their styles and configure the ReactJS framework from scratch with the following tools:**
 
 -   Babel
--   Webpack
--   Webpack Dev Server
 -   ESLint
 -   EditorConfig
 -   Prettier
