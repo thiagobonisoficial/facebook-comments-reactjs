@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import GlobalStyle from 'styles/Global';
-import PostSection from './styles';
-import { Header, PostList } from 'components';
+import { LoadingSection, PostSection } from './styles';
+import { LoadingSpinner, Header, PostList } from 'components';
 
 import FirstUserAvatar from 'assets/images/avatars/thiagodebonis.jpg';
 import SecondUserAvatar from 'assets/images/avatars/businesswoman.jpg';
@@ -11,6 +11,7 @@ import FourthUserAvatar from 'assets/images/avatars/lisabrennanjobs.jpg';
 
 export default class Home extends Component {
     state = {
+        loading: true,
         userDetailsData: {
             userAvatar: FirstUserAvatar,
             username: 'Thiago De Bonis',
@@ -59,14 +60,35 @@ export default class Home extends Component {
         ],
     };
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ loading: false });
+        }, 2000);
+    }
+
+    renderLoading = () => {
+        return (
+            <LoadingSection>
+                <LoadingSpinner />
+            </LoadingSection>
+        );
+    };
+
+    renderPosts = () => {
+        return (
+            <PostSection>
+                <PostList data={this.state.postListData} />
+            </PostSection>
+        );
+    };
+
     render() {
         return (
             <>
                 <GlobalStyle />
                 <Header data={this.state.userDetailsData} />
-                <PostSection>
-                    <PostList data={this.state.postListData} />
-                </PostSection>
+
+                {this.state.loading ? this.renderLoading() : this.renderPosts()}
             </>
         );
     }

@@ -1,6 +1,7 @@
 // OTHERS COMPONENTS BARREL
 export { default as Header } from './Header';
 export { default as Logotype } from './Logotype';
+export { default as LoadingSpinner } from './LoadingSpinner';
 
 // POST COMPONENTS BARREL
 export { default as Post } from './Post';
