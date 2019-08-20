@@ -23,4 +23,9 @@ export const Date = styled.span`
     margin: 0.3rem 0 0 0.2rem;
     font-size: 0.9rem;
     color: ${Colors.greys.dark2};
+
+    svg {
+        vertical-align: middle;
+        margin: 0 0 0.2rem 0.2rem;
+    }
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, DetailsContainer, Username, Date } from './styles';
+import { FaGlobeAmericas } from 'react-icons/fa';
 import { UserAvatar } from 'components';
 
 function PostDetails({ userAvatar, username, date }) {
@@ -14,7 +15,9 @@ function PostDetails({ userAvatar, username, date }) {
             />
             <DetailsContainer>
                 <Username>{username}</Username>
-                <Date>{date}</Date>
+                <Date>
+                    {date} <FaGlobeAmericas />
+                </Date>
             </DetailsContainer>
         </Container>
     );

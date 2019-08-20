@@ -11,6 +11,7 @@ const Colors = {
     },
     blues: {
         light: '#4A90E2',
+        light2: '#3a90e2',
     },
 };
 
