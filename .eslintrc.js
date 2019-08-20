@@ -26,10 +26,18 @@ module.exports = {
     plugins: ['react', 'prettier'],
     rules: {
         'prettier/prettier': 'error',
+        'react/state-in-constructor': true,
         'react/jsx-filename-extension': [
             'warn',
             { extensions: ['.jsx', '.js'] },
         ],
         'import/prefer-default-export': 'off',
+        'no-const-assign': 'warn',
+        'no-this-before-super': 'warn',
+        'no-undef': 'warn',
+        'no-unreachable': 'warn',
+        'no-unused-vars': 'warn',
+        'constructor-super': 'warn',
+        'valid-typeof': 'warn',
     },
 };
