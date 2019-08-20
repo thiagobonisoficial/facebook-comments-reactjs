@@ -1,5 +1,17 @@
 import React from 'react';
 
+import GlobalStyle from 'styles/Global';
+import AnimationSection from './styles';
+import { Error404Message, BackHome } from 'components';
+
 export default function Error404() {
-    return <h1>Error 404</h1>;
+    return (
+        <>
+            <GlobalStyle light />
+            <AnimationSection>
+                <Error404Message />
+                <BackHome />
+            </AnimationSection>
+        </>
+    );
 }

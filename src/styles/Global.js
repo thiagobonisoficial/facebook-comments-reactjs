@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import Reset from './Reset';
+import Colors from './Colors';
 
 const GlobalStyle = createGlobalStyle`
     ${Reset}
@@ -8,11 +9,16 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1rem;
-        background-color: #F2F2F2;
-        color: #3E3E3E;
+        background-color: ${props =>
+            props.light ? 'white' : Colors.greys.light};
+        color: ${Colors.greys.dark3};
         -webkit-font-smoothing: antialiased !important;
     }
 
 `;
+
+GlobalStyle.defaultProps = {
+    dark: true,
+};
 
 export default GlobalStyle;
